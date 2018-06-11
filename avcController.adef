@@ -1,0 +1,24 @@
+sandboxed: false
+
+version: 5.1
+
+executables:
+{
+	avcController = ( avcControllerComponent )
+}
+processes:
+{
+	run:
+	{
+		( avcController )
+	}
+}
+
+bindings:
+{
+
+	avcController.avcControllerComponent.le_avc     -> avcService.le_avc
+	avcController.avcControllerComponent.le_mrc     -> modemService.le_mrc
+}
+
+start: auto

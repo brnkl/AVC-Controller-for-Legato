@@ -1,0 +1,14 @@
+
+sources:
+{
+	avcController.c
+}
+
+requires:
+{
+    api:
+    {
+        $LEGATO_ROOT/interfaces/airVantage/le_avc.api
+		le_mrc.api
+    }
+}
